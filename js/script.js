@@ -25,9 +25,6 @@ let playRound = (playerSelection, computerSelection = getComputerChoice()) => {
     }
 }
 
-let cpu = 0;
-let you = 0;
-
 let game = () => {
     for (let i = 0; i < 5; i++) {
         let playerSelection = prompt('Rock Paper or Scissors?');
