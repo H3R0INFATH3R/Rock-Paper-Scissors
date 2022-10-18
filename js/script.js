@@ -70,25 +70,25 @@ let playRound = (playerSelection, computerSelection = getComputerChoice()) => {
         computerScore++;
         result.textContent = `You lose! ${computerSelection} beats ${playerSelection}`;
         score.textContent = `${playerScore} - ${computerScore}`;
-    }
-    
+    }   
     if (playerScore === 5 || computerScore === 5) {
         announceWinner();
     }
 }
 
-rock.addEventListener('click', function() {
-    playRound('Rock');
-    liveResult.appendChild(result);
-    liveResult.appendChild(score);
-});
-paper.addEventListener('click', function() {
-    playRound('Paper');
-    liveResult.appendChild(result);
-    liveResult.appendChild(score);
-});
-scissors.addEventListener('click', function () {
-    playRound('Scissors');
-    liveResult.appendChild(result);
-    liveResult.appendChild(score);
-});
+
+    rock.addEventListener('click', function() {
+        playRound('Rock');
+        liveResult.appendChild(result);
+        liveResult.appendChild(score);
+    });
+    paper.addEventListener('click', function() {
+        playRound('Paper');
+        liveResult.appendChild(result);
+        liveResult.appendChild(score);
+    });
+    scissors.addEventListener('click', function () {
+        playRound('Scissors');
+        liveResult.appendChild(result);
+        liveResult.appendChild(score);
+    });
