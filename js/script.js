@@ -57,7 +57,7 @@ let announceWinner = () => {
         liveResult.removeChild(score);
         liveResult.removeChild(finalWinner);
         liveResult.removeChild(playAgain);
-        btnR.disabled = true;
+        btnR.disabled = false;
         btnP.disabled = false;
         btnS.disabled = false;
     });
