@@ -13,7 +13,9 @@ result.classList.add('result');
 const score = document.createElement('h3');
 score.classList.add('score');
 const options = document.querySelector('.main-sec');
-const btn = document.querySelectorAll('.rock-btn');
+const btnR = document.querySelector('.rock-btn');
+const btnP = document.querySelector('.paper-btn');
+const btnS = document.querySelector('.scissors-btn');
 
 let computerScore = 0;
 let playerScore = 0;
@@ -27,6 +29,11 @@ let getComputerChoice = () => {
 let announceWinner = () => {
     const finalWinner = document.createElement('h2');
     finalWinner.classList.add('finalWinner');
+
+    
+    btnR.disabled = true;
+    btnP.disabled = true;
+    btnS.disabled = true;
 
     if (playerScore === 5) {
         finalWinner.textContent = 'Congratulations... You won!';
@@ -50,6 +57,9 @@ let announceWinner = () => {
         liveResult.removeChild(score);
         liveResult.removeChild(finalWinner);
         liveResult.removeChild(playAgain);
+        btnR.disabled = true;
+        btnP.disabled = false;
+        btnS.disabled = false;
     });
 }
 
