@@ -30,7 +30,6 @@ let announceWinner = () => {
     const finalWinner = document.createElement('h2');
     finalWinner.classList.add('finalWinner');
 
-    
     btnR.disabled = true;
     btnP.disabled = true;
     btnS.disabled = true;
@@ -90,15 +89,18 @@ let playRound = (playerSelection, computerSelection = getComputerChoice()) => {
     rock.addEventListener('click', function() {
         playRound('Rock');
         liveResult.appendChild(result);
+        if (playerScore !== 0 || computerScore !== 0)
         liveResult.appendChild(score);
     });
     paper.addEventListener('click', function() {
         playRound('Paper');
         liveResult.appendChild(result);
+        if (playerScore !== 0 || computerScore !== 0)
         liveResult.appendChild(score);
     });
     scissors.addEventListener('click', function () {
         playRound('Scissors');
         liveResult.appendChild(result);
+        if (playerScore !== 0 || computerScore !== 0)
         liveResult.appendChild(score);
     });
